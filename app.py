@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 import requests
 
-url = 'http://127.0.0.1:8000/predict'
+url = 'https://deepdive-tsahqcw5ta-ew.a.run.app/'
 
 def get_prediction(image):
     img_bytes = image.getvalue()
