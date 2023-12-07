@@ -54,8 +54,14 @@ def main():
 
     # Sidebar
     st.sidebar.image('https://i.imgur.com/fqkbsh2.png', width=200)
-    st.sidebar.markdown('<h3><a href="https://docs.google.com/presentation/d/1IhJCEaHFD1lr0hJHDOWrNU7ZuExr1K4zGb2GkyZeBXI/edit?usp=sharing">Presentation</h3>', unsafe_allow_html=True)
-    st.sidebar.markdown('<h3><a href="#">Demo</h3>', unsafe_allow_html=True)
+    st.sidebar.markdown('''<h3>
+                        <a href="https://docs.google.com/presentation/d/1IhJCEaHFD1lr0hJHDOWrNU7ZuExr1K4zGb2GkyZeBXI/edit?usp=sharing">
+                        Presentation <img style="padding-left:5px" height="30px" src="https://static.vecteezy.com/system/resources/previews/027/179/383/original/google-slide-slides-icon-logo-symbol-free-png.png">
+                        </a>
+                        </h3>''', unsafe_allow_html=True)
+    st.sidebar.markdown('''<h3><a href="#">
+                        Demo <img width="70px" src="https://i.imgur.com/HEmb7m0.png">
+                        </a></h3>''', unsafe_allow_html=True)
     st.sidebar.markdown('## Team Members')
     st.sidebar.markdown(""" Priyanka Gunnoo
                         <a href='https://www.linkedin.com/in/priyanka-gunnoo-2107/'><img src='https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/priyanka-gunnoo-2107/' alt='LinkedIn'></a>
