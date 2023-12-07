@@ -1,8 +1,4 @@
-import base64
-from io import StringIO
-import matplotlib.pyplot as plt
 import streamlit as st
-from matplotlib import numpy as np
 from streamlit.components.v1 import html
 from PIL import Image
 import requests
@@ -14,24 +10,6 @@ def get_prediction(image):
     response = requests.post(url, files={"file": img_bytes})
     return response.json()
 
-def svg_write(file_path, center=True):
-    # Retrieve saved string
-    with open(file_path, 'r') as file:
-        svg_string = file.read()
-
-
-    # Encode as base 64
-    b64 = base64.b64encode(svg_string.encode('utf-8')).decode('utf-8')
-
-    # Add some CSS on top
-    css_justify = "center" if center else "left"
-    css = '<p style="text-align:center; display: flex; justify-content: {};">'.format(css_justify)
-    html = r'{}<img src="data:image/svg+xml;base64,{}"/>'.format(
-        css, b64
-    )
-
-    # Write the HTML
-    st.write(html, unsafe_allow_html=True)
 
 def main():
     font_url = "https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap"
