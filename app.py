@@ -21,6 +21,7 @@ def main():
             font-family: 'Original Surfer', sans-serif;
             font-size: 44px;
             font-weight: bold;
+            color: white;
         }
 
         .main:before {
@@ -31,12 +32,18 @@ def main():
             top: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.6;
-            background-image: url('https://i.imgur.com/GkwHy8l.jpg');
+            opacity: 0.9;
+            background: linear-gradient(rgba(0, 0, 0, 0.9) 20%, rgba(0, 0, 255, 0.5) 50%), url('https://i.imgur.com/WnwIAfY.jpg');
             background-repeat: no-repeat;
-            background-position: 100% 50%;
+            background-position: 0 50%;
             background-size: cover;
             }
+
+        .main img {
+            border: 3px solid white;
+            border-top: 5px solid white;
+            border-bottom: 5px solid white;
+        }
     </style>
     """
 
@@ -74,7 +81,7 @@ def main():
         category = result.get("category")
         probability = result.get("probabilities")[category]
 
-        if category == "Background":
+        if category == "Backgrounds":
             st.write("No debris detected")
         else:
             # Use Markdown with custom styling for the category
