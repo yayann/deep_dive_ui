@@ -102,6 +102,7 @@ def main():
             # Use Markdown with custom styling for the category
             st.markdown(f"""
                 <style>
+                    .white-bg {{ background-color: #fff; padding: 10px; border-radius: 5px; }}
                     .category-box, .proba-box  {{
                         border: 1px solid #aaa;
                         border-radius: 5px;
@@ -110,14 +111,14 @@ def main():
                         display: inline-block;
                     }}
                 </style>
-                <div>Debris of the type <span class="category-box">{category}</span> were found in this image with a probability of <span class="proba-box">{probability:.2%}.</span></div>
+                <div class="white-bg">Debris of the type <span class="category-box">{category}</span> were found in this image with a probability of <span class="proba-box">{probability:.2%}.</span></div>
 
                 """, unsafe_allow_html=True)
 
         # add a spacer in between
-        st.write("")
-        st.write("Raw Prediction:")
-        st.json(result)
+        #st.write("")
+        #st.write("Raw Prediction:")
+        #st.json(result)
 
 if __name__ == "__main__":
     main()
